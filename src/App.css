@@ -1,10 +1,10 @@
 .row-header {
-  margin: 0px auto;
-  padding: 0px auto;
+  margin: 0px auto !important;
+  padding: 0px auto !important;
 }
 
 .row-content {
-  margin: 0px auto;
+  margin: 0px auto !important;
   padding: 50px 0px 50px 0px;
   border-bottom: 1px ridge;
   min-height: 400px;
@@ -18,7 +18,7 @@
 
 .jumbotron {
   padding: 70px 30px 70px 30px;
-  margin: 0px auto;
+  margin: 0px auto !important;
   background: #9575CD !important;
   color: floralwhite;
 }
@@ -31,4 +31,16 @@ address {
 
 .navbar-dark {
   background-color: #512DA8;
+}
+.btn-close::after{
+  content: "X";
+  font-weight: 700;
+  color: gray;
+}
+button{
+  border-width: 0;
+  background-color: white;
+}
+.collapse{
+  width: 1083px;
 }
