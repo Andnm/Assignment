@@ -17,7 +17,6 @@ function RenderLeader({ leader }) {
     )
 }
 
-
 const About = (props) => {
     const leaders = props.leaders.map((leader) => {
         return (

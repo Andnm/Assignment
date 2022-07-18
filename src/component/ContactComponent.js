@@ -44,4 +44,5 @@ function Contact(props) {
         </div>
     );
 }
+
 export default Contact;
