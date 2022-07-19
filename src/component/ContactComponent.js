@@ -50,10 +50,7 @@ class Contact extends Component {
           <h3>Contact Us</h3>
           <hr />
         </div>
-        <div className="row row-content">
-          <div className="col-12">
-            <h3>Location Information</h3>
-          </div>
+ 
           <div className="col-12 col-sm-4 offset-sm-1">
             <h5>Our Address</h5>
             <address>

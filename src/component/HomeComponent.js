@@ -4,9 +4,7 @@ import {
   CardImg,
   CardText,
   CardBody,
-  CardTitle,
-  CardSubtitle,
-} from "reactstrap";
+  CardTitle,} from "reactstrap";
 import { Loading } from "./LoadingComponent";
 
 function RenderCard({ item, isLoading, errMess }) {

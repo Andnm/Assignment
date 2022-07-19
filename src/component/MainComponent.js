@@ -72,7 +72,7 @@ import { addComment, fetchDishes } from "../redux/ActionCreators";
 //           <Redirect to="/home" />
 //         </Switch>
 //         <Footer />
-//       </div>
+//       </div
 //     );
 //   }
 // }
