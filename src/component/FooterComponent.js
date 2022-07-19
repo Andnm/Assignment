@@ -87,4 +87,5 @@ function Footer(props) {
     </div>
   );
 }
+
 export default Footer;
