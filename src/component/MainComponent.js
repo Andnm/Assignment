@@ -40,6 +40,7 @@ class Main extends Component {
                     comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId, 10))} />
             );
         };
+        
         return (
             <div>
                 <Header />

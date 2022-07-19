@@ -10,7 +10,6 @@ class Menu extends Component {
             selectedDish: null
         }
     }
-
     onDishSelect(dish) {
         this.setState({ selectedDish: dish });
     }
