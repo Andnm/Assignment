@@ -1,33 +1,47 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
-function RenderLeader({ leader }) {
-    return (
-        <Media className='mt-5'>
-            <Media left>
-                <Media src={leader.image} alt={leader.name} />
-            </Media>
-            <Media body middle className='ml-5'>
-                <h3>{leader.name}</h3>
-                <h5 className='mt-3 mb-4'>{leader.designation}</h5>
+import { Fade, Stagger } from 'react-animation-components';
+import { baseUrl } from '../shared/baseUrl';
+const leaderImg = {
+    height: '105px',
+    width:'105px',
+    minHeight: '105px',
+    maxHeight: '105px',
+    minWidth: '105px',
+    maxWidth: '105px'
+}
+function RenderLeader({leader}) {
+    return(
+        <Stagger in>
+            <Fade in>
+                    <div key={leader.id} className="col-12 mt-5">
+            <Media tag="li">
+              <Media left middle>
+                  <Media style={leaderImg} object src={leader.image} alt={leader.name} />
+              </Media>
+              <Media body className="ml-5">
+                <Media heading>{leader.name}</Media>
+                <p>{leader.designation}</p>
                 <p>{leader.description}</p>
+              </Media>
             </Media>
-        </Media>
-    )
+          </div>
+                    </Fade>
+            </Stagger>
+        
+    );
+
 }
 
-
-const About = (props) => {
-    const leaders = props.leaders.map((leader) => {
+function About(props) {
+    const leaders = props.leaders.leaders.map((leader) => {
         return (
-            <div key={leader.id}>
-                <RenderLeader leader={leader} />
-            </div>
+          <RenderLeader leader={leader} key={leader.id}/>
         );
     });
 
-    return (
+    return(
         <div className="container">
             <div className="row">
                 <Breadcrumb>
@@ -37,9 +51,9 @@ const About = (props) => {
                 <div className="col-12">
                     <h3>About Us</h3>
                     <hr />
-                </div>
+                </div>                
             </div>
-            <div className="row row-content ml-1">
+            <div className="row row-content">
                 <div className="col-12 col-md-6">
                     <h2>Our History</h2>
                     <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
@@ -69,15 +83,15 @@ const About = (props) => {
                                 <p className="mb-0">You better cut the pizza in four pieces because
                                     I'm not hungry enough to eat six.</p>
                                 <footer className="blockquote-footer">Yogi Berra,
-                                    <cite title="Source Title">The Wit and Wisdom of Yogi Berra,
-                                        P. Pepe, Diversion Books, 2014</cite>
+                                <cite title="Source Title">The Wit and Wisdom of Yogi Berra,
+                                    P. Pepe, Diversion Books, 2014</cite>
                                 </footer>
                             </blockquote>
                         </CardBody>
                     </Card>
                 </div>
             </div>
-            <div className="row row-content ml-1">
+            <div className="row row-content">
                 <div className="col-12">
                     <h2>Corporate Leadership</h2>
                 </div>
@@ -89,5 +103,6 @@ const About = (props) => {
             </div>
         </div>
     );
-};
-export default About;    
+}
+
+export default About; 

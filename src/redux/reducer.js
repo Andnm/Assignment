@@ -9,6 +9,7 @@ export const initialState = {
   promotions: PROMOTIONS,
   leaders: LEADERS,
 };
+
 export const Reducer = (state = initialState, action) => {
   return state;
 };
