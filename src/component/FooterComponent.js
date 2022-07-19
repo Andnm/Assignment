@@ -47,7 +47,7 @@ function Footer(props) {
                 href="http://google.com/+"
               >
                 <i className="fa fa-google-plus"></i>
-          
+              </a>
               <a
                 className="btn btn-social-icon btn-facebook"
                 href="http://www.facebook.com/profile.php?id="

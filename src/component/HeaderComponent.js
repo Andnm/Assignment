@@ -49,7 +49,7 @@ class Header extends Component {
         <Navbar dark expand="md">
           <div className="container">
             <div className="row">
- onClick={this.toggleNav} />
+              <NavbarToggler onClick={this.toggleNav} />
               <NavbarBrand>
                 <img
                   src="assets/images/logo.png"
